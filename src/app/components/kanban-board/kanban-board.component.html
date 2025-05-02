@@ -1,0 +1,7 @@
+<div class="kanban-board">
+  <div class="container__inner kanban-board__inner">
+    @for (list of lists; track list.id) {
+    <app-todo-list [list]="list" />
+    }
+  </div>
+</div>

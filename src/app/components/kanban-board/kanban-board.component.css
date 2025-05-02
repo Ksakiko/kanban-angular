@@ -1,0 +1,8 @@
+.kanban-board {
+  width: 100%;
+}
+
+.kanban-board__inner {
+  display: flex; /* temp */
+  gap: 2rem;
+}

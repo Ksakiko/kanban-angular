@@ -1,0 +1,11 @@
+<form class="form todo-form">
+  <label for="todo"></label>
+  <input
+    type="text"
+    id="todo"
+    name="todo"
+    placeholder="Write a new todo here..."
+    (focusout)="handleSubmit()"
+    [(ngModel)]="todoInput"
+  />
+</form>

@@ -1,0 +1,16 @@
+<div class="todo-list">
+  <header class="todo-list__header">
+    <h3 class="todo-list__title">{{ list().title }}</h3>
+    <div class="todo-list__action">
+      <button (click)="handleAddTodo()">+</button>
+    </div>
+  </header>
+  <ul class="todo-list__list">
+    <!-- @for (todo of todos; track todo.id) { -->
+    @for (todo of todos; track todo.id) {
+    <app-todo-item [todo]="todo" />
+    } @if (inputIsVisible()) {
+    <app-todo-form />
+    }
+  </ul>
+</div>
