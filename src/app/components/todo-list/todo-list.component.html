@@ -1,0 +1,20 @@
+<div class="todo-list">
+  <header class="todo-list__header">
+    <h3 class="todo-list__title">{{ list().title }}</h3>
+    <div class="todo-list__action">
+      <button (click)="handleDeleteList()">X</button>
+    </div>
+  </header>
+  <ul class="todo-list__list">
+    @for (todo of filteredTodos(); track todo.id) {
+    <app-todo-item [todo]="todo" (filterTodos)="filterTodos()" />
+    } @if (!formIsVisible()) {
+    <div class="todo-list__action">
+      <button (click)="handleAddTodo()">+ Add new todo</button>
+    </div>
+    } @else {
+    <app-todo-form [list]="list()" (filterTodos)="filterTodos()" />
+
+    }
+  </ul>
+</div>

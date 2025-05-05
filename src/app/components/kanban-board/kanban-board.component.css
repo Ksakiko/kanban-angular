@@ -1,0 +1,15 @@
+.kanban-board {
+  width: 100%;
+}
+
+.kanban-board__inner {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.kanban-board__action {
+  margin-bottom: 1rem;
+}

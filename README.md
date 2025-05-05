@@ -6,7 +6,7 @@ npm run dev
 
 The command above runs both frontend and json-server. If you would like to run only frontend use `npm run start`, or `npm run server` for json-server.
 
-# KanbanAngular
+# Kanban Angular
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.10.
 
