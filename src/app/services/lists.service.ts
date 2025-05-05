@@ -26,7 +26,7 @@ export class ListsService {
     return this.http.post<List>(this.url, list, httpOptions);
   }
 
-  deleteList(id: string | undefined): Observable<unknown> {
+  deleteList(id: string): Observable<unknown> {
     const endpoint = `/${id}`;
     return this.http.delete(this.url + endpoint);
   }

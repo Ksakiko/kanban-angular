@@ -1,10 +1,15 @@
-export interface Todo {
+export type Todo = {
   id?: string;
   todo: string;
   listId: string;
-}
+};
 
-export interface List {
+export type TodoInput = {
+  todo: string;
+  listId: string;
+};
+
+export type List = {
   id?: string;
   title: string;
-}
+};

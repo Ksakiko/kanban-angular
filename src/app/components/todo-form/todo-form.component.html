@@ -5,7 +5,7 @@
     id="todo"
     name="todo"
     placeholder="Write a new todo here..."
-    (focusout)="handleSubmit()"
+    (blur)="handleSubmit()"
     [(ngModel)]="todoInput"
   />
 </form>

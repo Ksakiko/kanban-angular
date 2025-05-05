@@ -1,7 +1,17 @@
 <div class="kanban-board">
-  <div class="container__inner kanban-board__inner">
-    @for (list of lists; track list.id) {
-    <app-todo-list [list]="list" />
-    }
+  <div class="container__inner">
+    <div class="kanban-board__action">
+      <button (click)="handleAddNewList()">+ Add new list</button>
+    </div>
+    <div class="kanban-board__inner">
+      @for (list of lists(); track list.id) {
+      <app-todo-list
+        [list]="list"
+        (getTempUpdatedTodoLists)="getTempUpdatedTodoLists($event)"
+      />
+      } @if (newListIsVisible()) {
+      <app-list-form (getTodoLists)="getTodoLists()" />
+      }
+    </div>
   </div>
 </div>

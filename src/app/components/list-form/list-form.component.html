@@ -1,0 +1,13 @@
+<div class="todo-list">
+  <form class="form list-form">
+    <label for="todoList"></label>
+    <input
+      type="text"
+      id="todoList"
+      name="todoList"
+      placeholder="Write a list name here..."
+      (blur)="handleSubmit()"
+      [(ngModel)]="listTitleInput"
+    />
+  </form>
+</div>

@@ -3,6 +3,13 @@
 }
 
 .kanban-board__inner {
-  display: flex; /* temp */
-  gap: 2rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.kanban-board__action {
+  margin-bottom: 1rem;
 }
