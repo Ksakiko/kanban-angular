@@ -6,7 +6,6 @@ import {
   OnInit,
   output,
   signal,
-  WritableSignal,
 } from '@angular/core';
 import { TodoItemComponent } from '../todo-item/todo-item.component';
 import { TodosService } from '../../services/todos.service';
@@ -54,8 +53,18 @@ export class TodoListContainerComponent implements OnInit {
   }
 
   handleDeleteList = () => {
+    const todosToBeDeleted = this.filteredTodos().filter(
+      (x) => x.listId === this.todoListId()
+    );
+
+    const todoIds = todosToBeDeleted.map((x) => x.id);
+
     // Update the lists realtime in frontend
     this.getTempUpdatedTodoLists.emit(this.todoListId()!);
+
+    // Handle delete todos that belong to the list to be deleted in backend
+    this.todosService.deleteMultipleTodos(todoIds);
+
     // Handle delete in backend
     this.listsService.deleteList(this.todoListId()!).subscribe(() => {});
   };

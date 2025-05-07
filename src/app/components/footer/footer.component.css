@@ -1,7 +1,7 @@
 .footer {
   width: 100%;
   height: var(--footer-height);
-  background-color: rgb(24, 24, 67);
+  background-color: rgb(8, 8, 28);
   color: var(--color-light);
   font-size: 10px;
   display: flex;

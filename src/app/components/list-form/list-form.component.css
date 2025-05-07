@@ -1,6 +1,10 @@
 .todo-list {
   padding: 1rem;
-  background-color: lightpink; /* temp */
+  background: linear-gradient(
+    180deg,
+    var(--color-primary-light) 0%,
+    var(--color-secondary-light) 100%
+  );
   width: 300px;
   min-height: 100px;
   border-radius: 10px;
