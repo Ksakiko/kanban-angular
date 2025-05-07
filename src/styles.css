@@ -1,6 +1,12 @@
 :root {
   --color-light: #fff;
 
+  --color-primary: rgba(121, 7, 241, 1);
+  --color-primary-light: rgb(205, 173, 240);
+  --color-secondary: rgba(243, 16, 85, 1);
+  --color-secondary-light: rgb(238, 172, 192);
+  --color-secondary-extra-light: rgb(255, 233, 239);
+
   --header-height: 70px;
   --footer-height: 50px;
 
@@ -41,4 +47,12 @@ li {
   padding-right: var(--page-padding);
   padding-bottom: var(--page-padding);
   min-height: calc(100vh - var(--footer-height));
+}
+
+button {
+  font-weight: 600;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background-color: var(--color-secondary-extra-light);
 }

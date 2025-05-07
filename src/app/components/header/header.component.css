@@ -1,8 +1,15 @@
 .header {
   width: 100%;
   height: var(--header-height);
-  background-color: rgb(127, 127, 201);
+  /* background-color: rgb(127, 127, 201); */
+  background: linear-gradient(
+    90deg,
+    var(--color-primary) 0%,
+    var(--color-secondary) 100%
+  );
   position: fixed;
+  color: #fff;
+  font-size: 1.5rem;
 }
 
 .header__inner {
