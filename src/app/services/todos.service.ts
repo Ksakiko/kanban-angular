@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { computed, Injectable, signal } from '@angular/core';
-import { Observable } from 'rxjs';
+import { forkJoin, Observable } from 'rxjs';
 import { List, Todo, TodoInput } from '../models/todo.model';
 import { filter } from 'rxjs';
 
@@ -12,20 +12,9 @@ export class TodosService {
 
   constructor(private http: HttpClient) {}
 
-  // getAllTodos(): Observable<any[]> {
   getAllTodos(): Observable<any[]> {
     return this.http.get<any[]>(this.url);
   }
-
-  // getTodosByListId(id?: string): Observable<Todo[]> {
-  // const todos = this.getAllTodos();
-
-  // TODO: Find a way to solve this
-  // const filteredTodos = todos.pipe(filter<Todo[]>((x) => x.listId === id));
-
-  // return filteredTodos;
-  // return this.http.get<any[]>(`${this.url}/${id}`);
-  // }
 
   addNewTodo(todo: TodoInput): Observable<Todo> {
     const httpOptions = {
@@ -38,6 +27,16 @@ export class TodosService {
 
   deleteTodo(id: string | undefined): Observable<unknown> {
     const endpoint = `/${id}`;
-    return this.http.delete(this.url + endpoint);
+    // return this.http.delete(this.url + endpoint);
+    return this.http.delete(`${this.url}/${id}`);
   }
+
+  // Use this in order to delete todos by listId
+  deleteMultipleTodos = async (todoIds: (string | undefined)[]) => {
+    const urls = todoIds.map((id) => this.http.delete(`${this.url}/${id}`));
+
+    forkJoin(urls).subscribe((data) => {
+      return data;
+    });
+  };
 }
