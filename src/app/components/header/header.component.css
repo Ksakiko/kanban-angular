@@ -1,7 +1,6 @@
 .header {
   width: 100%;
   height: var(--header-height);
-  /* background-color: rgb(127, 127, 201); */
   background: linear-gradient(
     90deg,
     var(--color-primary) 0%,

@@ -1,67 +1,33 @@
-# Get started
-
-```
-npm run dev
-```
-
-The command above runs both frontend and json-server. If you would like to run only frontend use `npm run start`, or `npm run server` for json-server.
-
 # Kanban Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.10.
+Kanban Angular is a Kanban Board application which is built on Angular. In the current version, you can create new lists and todos and delete them.
 
-## Development server
+# Database
 
-To start a local development server, run:
+In this project, json server is currently used to simulate a backend system.
 
-```bash
-ng serve
-```
+# Developing
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+1. Clone the repo
 
-## Code scaffolding
+   Navigate to a directory where you want to clone the repo in the terminal
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+   Run `git clone https://github.com/Ksakiko/kanban-angular.git`
 
-```bash
-ng generate component component-name
-```
+2. Install npm packages
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+   Run `npm i` in the directory where the project is located in the terminal
 
-```bash
-ng generate --help
-```
+3. Start a local server and backend
 
-## Building
+   Run `npm run dev`
 
-To build the project run:
+   This command line runs both frontend and json-server. If you need to run only frontend use `npm run start`, or `npm run server` for json-server.
 
-```bash
-ng build
-```
+4. Open a web browser to view the application
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+   Copy and paste the link (`http://localhost:4200/`) in a web browser
 
-## Running unit tests
+   or `Ctrl+click` on the link in the terminal (Windows)
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+   or `Cmd+click` on the link in the terminal (macOS)
